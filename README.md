@@ -12,15 +12,17 @@ The model used for this project is a recurrent neural network (RNN) with a long 
 A hyperparameter is a parameter that controls how the model learns from the data. For example, the number of hidden units, the number of layers, the learning rate, etc. Hyperparameter optimization is the process of finding the best combination of hyperparameters that can improve the model performance. For this project, I used trial and error to find the optimal hyperparameters. I tried different values for each hyperparameter and compared the results based on the mean squared error (MSE), which measures how close the predictions are to the actual values. The final hyperparameters are:
 
 - Input size: 1
-- Hidden size: 32
-- Number of layers: 1
+- Hidden size: 64
+- Number of layers: 2
 - Output size: 1
-- Learning rate: 0.01
+- Learning rate: 0.001
 - Number of epochs: 100
 - Window size: 20
+- Dropout rate: 0.2
+- Optimizer: Adam
 
 ## Results
-The results of this project show that the model can predict the normalized closing price of AAPL with a reasonable accuracy. The model achieves a training loss of 0.0002 and a test loss of 0.0012 on the AAPL data, using MSE as the metric. The following plot shows the actual and predicted stock prices on the test set:
+The results of this project show that the model can predict the normalized closing price of AAPL with a reasonable accuracy. The model achieves a training loss of 0.0272 and a test loss of 0.2360 on the AAPL data, using MSE as the metric. The following plot shows the actual and predicted stock prices on the test set:
 
 ![Stock Price Prediction Plot](./images/s&p500.png)
 
